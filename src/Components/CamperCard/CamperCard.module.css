@@ -1,0 +1,46 @@
+.cardContainer {
+  display: flex;
+  width: 888px;
+  height: 358px;
+  padding: 24px;
+  background-color: #f2f4f7;
+  border-color: #101828;
+  border-radius: 20px;
+  border-style: solid;
+  border-width: 1px;
+  column-gap: 24px;
+}
+
+.camperPicture {
+  width: 290px;
+  height: 310px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  width: 526px;
+  font-weight: 600;
+  font-size: 24px;
+}
+
+.camperDescription {
+  width: 526px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.camperDetails{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    list-style: none;
+}
+.showMoreButton{
+    background-color: var(--red);
+}
+
+/* --red */

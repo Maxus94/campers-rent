@@ -1,6 +1,5 @@
 const CampersFavorites = () => {
-    return <div>CampersFavorites</div>;
-  };
-  
-  export default CampersFavorites;
-  
+  return <div>CampersFavorites</div>;
+};
+
+export default CampersFavorites;
