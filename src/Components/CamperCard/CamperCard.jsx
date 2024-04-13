@@ -3,7 +3,7 @@ import CamperFeatures from "../CamperFeatures/CamperFeatures";
 import CamperReviews from "../CamperReviews/CamperReviews";
 import css from "./CamperCard.module.css";
 import { useDispatch, useSelector } from "react-redux";
-import { openModal } from "../../store/modalSlice";
+import { openModal, setCamper } from "../../store/modalSlice";
 import { selectModal } from "../../store/selectors";
 const CamperCard = ({
   camper: {
@@ -51,7 +51,17 @@ const CamperCard = ({
           type="button"
           onClick={() => {
             dispatch(openModal());
-            console.log(modalIsShown);
+            dispatch(
+              setCamper({
+                name,
+                price,
+                rating,
+                reviews,
+                location,                
+                description,
+                gallery,                                                
+              })
+            );
           }}
         >
           Show more
