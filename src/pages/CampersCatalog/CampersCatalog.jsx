@@ -1,6 +1,7 @@
+import CamperCard from "../../Components/CamperCard/CamperCard";
+
 const CampersCatalog = () => {
-    return <div>CampersCatalog</div>;
-  };
-  
-  export default CampersCatalog;
-  
+  return <CamperCard />
+};
+
+export default CampersCatalog;
