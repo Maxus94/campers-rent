@@ -18,6 +18,12 @@ const CamperCard = ({
     adults,
     details,
     engine,
+    consumption,
+    tank,
+    form,
+    length,
+    width,
+    height,
   },
 }) => {
   const dispatch = useDispatch();
@@ -57,9 +63,19 @@ const CamperCard = ({
                 price,
                 rating,
                 reviews,
-                location,                
+                location,
+                transmission,
                 description,
-                gallery,                                                
+                gallery,
+                adults,
+                details,
+                engine,
+                consumption,
+                tank,
+                form,
+                length,
+                width,
+                height,
               })
             );
           }}

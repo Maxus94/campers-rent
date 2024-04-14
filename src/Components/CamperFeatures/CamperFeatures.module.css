@@ -1,0 +1,8 @@
+.featuresReviewsContainer{
+    width: 430px;
+}
+
+.vehicleDetail{
+    display: flex;
+    justify-content: space-between;
+}

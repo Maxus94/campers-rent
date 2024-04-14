@@ -1,28 +1,93 @@
 .overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(0, 0, 0, 0.8);
-    z-index: 1200;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1200;
 }
 
 .modal {
-    width: 982px;
-    height: 720px;
-    background-color: white;
-    padding: 40px;
-    border-radius: 20px;    
+  width: 982px;
+  height: 720px;
+  background-color: white;
+  padding: 40px;
+  border-radius: 20px;
+  overflow-y: scroll;
 }
 
-.modalHeader{
-    display: flex;
-    width: 902px;
-    justify-content: space-between;
+.modalHeader {
+  display: flex;
+  width: 902px;
+  justify-content: space-between;
+}
+
+.camperPicturesContainer {
+  display: flex;
+  width: 100%;
+  column-gap: 16px;
+}
+.camperPicture {
+  /* width: calc((100% - 32px) / 3); */
+  width: 290px;
+  height: 310px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.switchButtonsContainer {
+  display: flex;
+  column-gap: 40px;
+  list-style: none;
+}
+
+.switchButton {
+  background-color: white;
+  padding: 0;
+  border: none;
+  outline: none;
+  font-size: 20px;
+  line-height: 1.2;
+  font-weight: 600;
+}
+
+.switchButton:hover, .switchButton:focus {
+  color: red;
+}
+
+/* .switchButton:focus {
+  position: relative;
+}
+
+.switchButton:focus::after {
+  position: absolute;
+  left: 0px;
+  top: 40px;
+  content: "";
+  width: 100px;
+  height: 4px;
+  background-color: red;
+} */
+
+.isActive {
+  position: relative;
+}
+.isActive::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 160px;
+  height: 40px;
+  top: 40px;
+  background-color: red;
+}
+
+.featuresReviewsContainer{
+  display: flex;
 }
 
 /* .modalClose {

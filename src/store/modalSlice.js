@@ -9,16 +9,17 @@ const modalSlice = createSlice({
     },
     closeModal: (state) => {
       state.modalIsShown = false;
+      state.camper = {};
     },
     setCamper: (state, { payload }) => {
       state.camper = payload;
     },
-    cleanCamper: (state) => {
-      state.camper = {};
-    },
+    // cleanCamper: (state) => {
+    //   state.camper = {};
+    // },
   },
 });
 
 export const modalReducer = modalSlice.reducer;
 
-export const { openModal, closeModal, setCamper, cleanCamper } = modalSlice.actions;
+export const { openModal, closeModal, setCamper} = modalSlice.actions;
