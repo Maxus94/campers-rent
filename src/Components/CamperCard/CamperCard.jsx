@@ -4,9 +4,14 @@ import CamperReviews from "../CamperReviews/CamperReviews";
 import css from "./CamperCard.module.css";
 import { useDispatch, useSelector } from "react-redux";
 import { openModal, setCamper } from "../../store/modalSlice";
-import { selectModal } from "../../store/selectors";
+import { selectFavorites, selectModal } from "../../store/selectors";
+import {
+  addToFavorites,
+  removeFromFavorites,
+} from "../../store/favoritesSlice";
 const CamperCard = ({
   camper: {
+    _id,
     name,
     price,
     rating,
@@ -28,6 +33,17 @@ const CamperCard = ({
 }) => {
   const dispatch = useDispatch();
   const modalIsShown = useSelector(selectModal);
+  const favorites = useSelector(selectFavorites);
+  const toggleFavorites = (num) => {
+    console.log(favorites);
+    if (favorites.includes(num)) {
+      dispatch(removeFromFavorites(num));
+    } else {
+      dispatch(addToFavorites(num));
+    }
+  };
+
+  console.log(favorites);
 
   return (
     <div className={css.cardContainer}>
@@ -37,7 +53,12 @@ const CamperCard = ({
         <div>
           <div className={css.cardHeader}>
             <p>{name}</p>
-            <p>{price}</p>
+            <p>
+              {price}
+              <button type="button" onClick={() => toggleFavorites(_id)}>
+                *
+              </button>
+            </p>
           </div>
           <p>
             {rating}({reviews.length} Reviews)<span>{location}</span>
@@ -59,6 +80,7 @@ const CamperCard = ({
             dispatch(openModal());
             dispatch(
               setCamper({
+                _id,
                 name,
                 price,
                 rating,

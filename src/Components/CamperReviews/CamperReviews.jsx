@@ -19,7 +19,7 @@ const CamperReviews = () => {
         <li key={reviews.indexOf(review)}>
           <div>{review.reviewer_name.slice(0, 1)}</div>
           <p>{review.reviewer_name}</p>
-          <p>{makeStars(review.reviewer_rating)}</p>
+          <p>{makeStars(review.reviewer_rating)}</p>          
           <p>{review.comment}</p>
         </li>
       ))}

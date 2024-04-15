@@ -1,16 +1,20 @@
 import { modalReducer } from "./modalSlice";
+import { favoritesReducer } from "./favoritesSlice";
+import { pageReducer } from "./pageSlice";
 
-// import { persistReducer } from 'redux-persist';
-// import storage from 'redux-persist/lib/storage';
+import { persistReducer } from "redux-persist";
+import storage from "redux-persist/lib/storage";
 
-// const persistConfig = {
-//   key: 'contacts',
-//   storage,
-// };
+const persistConfig = {
+  key: "favorites",
+  storage,
+};
 
-// const persistedReducer = persistReducer(persistConfig, contactsReducer);
+const persistedReducer = persistReducer(persistConfig, favoritesReducer);
 
 export const reducer = {
-  //   contacts: persistedReducer,
+  favorites: persistedReducer,
   modal: modalReducer,
+  // favorites: favoritesReducer,
+  page: pageReducer,
 };

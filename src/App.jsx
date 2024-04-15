@@ -5,16 +5,20 @@ import CampersFavorites from "./pages/CampersFavorites/CampersFavorites";
 import { Modal } from "./Components/Modal/Modal";
 import { useSelector } from "react-redux";
 import { selectModal } from "./store/selectors";
+import MainLayout from "./layouts/MainLayout/MainLayout";
 
 function App() {
   const modalIsShown = useSelector(selectModal);
   return (
     <>
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/catalog" element={<CampersCatalog />} />
-        <Route path="/favorites" element={<CampersFavorites />} />
-        <Route path="*" element={<Home />} />
+        <Route path="/" element={<MainLayout />}>
+          <Route index element={<Home />} />
+          {/* <Route path="/" element={<Home />} /> */}
+          <Route path="/catalog" element={<CampersCatalog />} />
+          <Route path="/favorites" element={<CampersFavorites />} />
+          <Route path="*" element={<Home />} />
+        </Route>
       </Routes>
       {modalIsShown && <Modal />}
     </>
