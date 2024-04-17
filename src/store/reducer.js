@@ -4,6 +4,7 @@ import { pageReducer } from "./pageSlice";
 
 import { persistReducer } from "redux-persist";
 import storage from "redux-persist/lib/storage";
+import { filterReducer } from "./filterSlice";
 
 const persistConfig = {
   key: "favorites",
@@ -17,4 +18,5 @@ export const reducer = {
   modal: modalReducer,
   // favorites: favoritesReducer,
   page: pageReducer,
+  filters: filterReducer,
 };

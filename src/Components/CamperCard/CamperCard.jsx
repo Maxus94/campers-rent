@@ -35,15 +35,12 @@ const CamperCard = ({
   const modalIsShown = useSelector(selectModal);
   const favorites = useSelector(selectFavorites);
   const toggleFavorites = (num) => {
-    console.log(favorites);
     if (favorites.includes(num)) {
       dispatch(removeFromFavorites(num));
     } else {
       dispatch(addToFavorites(num));
     }
   };
-
-  console.log(favorites);
 
   return (
     <div className={css.cardContainer}>
