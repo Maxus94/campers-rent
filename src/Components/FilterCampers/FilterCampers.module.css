@@ -1,0 +1,8 @@
+.filterFormContainer {
+    width: 360px;
+}
+
+.label {
+    color: var(--grey);
+    margin-bottom: 8px;
+}

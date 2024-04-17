@@ -13,6 +13,8 @@
   -moz-osx-font-smoothing: grayscale;
   --black: #101828;
   --red: #E44848;
+  --red-hover: #D84343;
+  --grey: #475467;
 }
 
 * {
@@ -37,23 +39,15 @@ ol {
   padding-left: 0;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+ul {
+  list-style: none;
 }
 
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-  color: var(--black);
+a {
+  text-decoration: inherit;
 }
+
+
 
 h1 {
   font-size: 3.2em;
@@ -84,10 +78,18 @@ button:focus-visible {
     color: #213547;
     background-color: #ffffff;
   }
-  a:hover {
-    color: #747bff;
-  }
+
+
   button {
     background-color: #f9f9f9;
   }
+}
+
+.active {
+  color: var(--red);
+}
+
+.active:hover,
+.active:focus {
+  color: var(--red);
 }

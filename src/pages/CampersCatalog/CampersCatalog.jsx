@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { selectFilters, selectPage } from "../../store/selectors";
 import { nextPage } from "../../store/pageSlice";
 import FilterCampers from "../../Components/FilterCampers/FilterCampers";
+import css from "./CampersCatalog.module.css";
 
 const CampersCatalog = () => {
   const [campers, setCampers] = useState([]);
@@ -77,36 +78,38 @@ const CampersCatalog = () => {
   }, [page]);
 
   return (
-    <div>
+    <div className={css.catalogContainer}>
       <FilterCampers campersFilter={campersFilter} />
-      <ul>
-        {campers
-          .filter(
-            (camper) =>
-              camper.location
-                .toLowerCase()
-                .includes(camperLocation.toLowerCase()) &&
-              camper.form.toLowerCase().includes(camperType.toLowerCase()) &&
-              camper.details.airConditioner >= camperAC &&
-              camper.details.kitchen >= camperKitchen &&
-              camper.details.TV >= camperTV &&
-              camper.details.toilet >= camperShowerWC &&
-              camper.details.shower >= camperShowerWC &&
-              camper.transmission
-                .toLowerCase()
-                .includes(camperGearBox.toLowerCase())
-          )
-          .map((camper) => (
-            <li key={camper._id}>
-              <CamperCard camper={camper} />
-            </li>
-          ))}
-      </ul>
-      {loadMoreIsVisible && (
-        <button type="button" onClick={() => dispatch(nextPage())}>
-          Load more
-        </button>
-      )}
+      <div>
+        <ul>
+          {campers
+            .filter(
+              (camper) =>
+                camper.location
+                  .toLowerCase()
+                  .includes(camperLocation.toLowerCase()) &&
+                camper.form.toLowerCase().includes(camperType.toLowerCase()) &&
+                camper.details.airConditioner >= camperAC &&
+                camper.details.kitchen >= camperKitchen &&
+                camper.details.TV >= camperTV &&
+                camper.details.toilet >= camperShowerWC &&
+                camper.details.shower >= camperShowerWC &&
+                camper.transmission
+                  .toLowerCase()
+                  .includes(camperGearBox.toLowerCase())
+            )
+            .map((camper) => (
+              <li key={camper._id}>
+                <CamperCard camper={camper} />
+              </li>
+            ))}
+        </ul>
+        {loadMoreIsVisible && (
+          <button type="button" onClick={() => dispatch(nextPage())}>
+            Load more
+          </button>
+        )}
+      </div>
     </div>
   );
 };

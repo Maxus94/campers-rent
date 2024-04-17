@@ -1,0 +1,35 @@
+.headerContainer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    padding-bottom: 16px;
+}
+
+.navigationContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style: none;
+    column-gap: 24px;
+}
+
+.headerLink {
+    font-size: 24px;
+    color: var(--black);
+}
+
+.headerLink:hover {
+    color: var(--grey);
+}
+
+.adressList {
+    display: flex;
+    flex-wrap: nowrap;
+    column-gap: 16px;
+}
+
+.adressContainer {
+    display: flex;
+    align-items: center;
+}

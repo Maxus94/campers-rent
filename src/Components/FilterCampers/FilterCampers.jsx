@@ -2,6 +2,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { selectFilters } from "../../store/selectors";
 import { Field, Form, Formik } from "formik";
 import { changeFilter } from "../../store/filterSlice";
+import css from "./FilterCampers.module.css";
 
 const FilterCampers = ({ campersFilter }) => {
   const filters = useSelector(selectFilters);
@@ -35,9 +36,10 @@ const FilterCampers = ({ campersFilter }) => {
       initialValues={{ location: "", equipment: [], type: "" }}
       onSubmit={handleSubmit}
     >
-      <Form>
-        <span>location</span>
+      <Form className={css.filterFormContainer}>
+        <p className={css.label}>Location</p>
         <Field type="text" name="location" id="location" />
+        <p className={css.label}>Filters</p>
         <Field type="checkbox" name="equipment" value="AC" />
         <span>AC</span>
         <Field type="checkbox" name="equipment" value="Automatic" />
