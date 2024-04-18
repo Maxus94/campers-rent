@@ -21,6 +21,7 @@
 .cardHeader {
   display: flex;
   justify-content: space-between;
+  flex-wrap: nowrap;
   width: 526px;
   font-weight: 600;
   font-size: 24px;
@@ -33,14 +34,34 @@
   text-overflow: ellipsis;
 }
 
-.camperDetails{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    list-style: none;
+.camperDetails {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  list-style: none;
 }
-.showMoreButton{
-    background-color: var(--red);
+
+.showMoreButton {
+  background-color: var(--red);
+}
+
+.inFavorites {
+  fill: var(--red);
+  stroke: none
+}
+
+.notInFavorites {
+  fill: none;
+  stroke: var(--black);
+}
+
+.favoritesButton {
+  border: none;
+  background-color: #f2f4f7;
+  padding: 0;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
 }
 
 /* --red */

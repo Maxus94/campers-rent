@@ -1,7 +1,7 @@
 import { useState } from "react";
 import CamperFeatures from "../CamperFeatures/CamperFeatures";
 import CamperReviews from "../CamperReviews/CamperReviews";
-import css from "./CamperCard.module.css";
+
 import { useDispatch, useSelector } from "react-redux";
 import { openModal, setCamper } from "../../store/modalSlice";
 import { selectFavorites, selectModal } from "../../store/selectors";
@@ -9,6 +9,9 @@ import {
   addToFavorites,
   removeFromFavorites,
 } from "../../store/favoritesSlice";
+
+import css from "./CamperCard.module.css";
+
 const CamperCard = ({
   camper: {
     _id,
@@ -50,12 +53,25 @@ const CamperCard = ({
         <div>
           <div className={css.cardHeader}>
             <p>{name}</p>
-            <p>
-              {price}
-              <button type="button" onClick={() => toggleFavorites(_id)}>
-                *
+            <span>
+              &#8364;{price}
+              <button
+                className={css.favoritesButton}
+                type="button"
+                onClick={() => toggleFavorites(_id)}
+              >
+                <svg width="24" height="24">
+                  <use
+                    className={
+                      favorites.includes(_id)
+                        ? css.inFavorites
+                        : css.notInFavorites
+                    }
+                    href="/src/img/sprite.svg#icon-heart1"
+                  ></use>
+                </svg>
               </button>
-            </p>
+            </span>
           </div>
           <p>
             {rating}({reviews.length} Reviews)<span>{location}</span>
