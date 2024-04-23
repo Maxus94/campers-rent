@@ -34,6 +34,7 @@ const CamperCard = ({
     height,
   },
 }) => {
+  console.log(details);
   const dispatch = useDispatch();
   const modalIsShown = useSelector(selectModal);
   const favorites = useSelector(selectFavorites);

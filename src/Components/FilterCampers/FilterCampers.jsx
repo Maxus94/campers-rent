@@ -37,25 +37,158 @@ const FilterCampers = ({ campersFilter }) => {
       onSubmit={handleSubmit}
     >
       <Form className={css.filterFormContainer}>
-        <p className={css.label}>Location</p>
+        <p className={css.subformTitle}>Location</p>
         <Field type="text" name="location" id="location" />
-        <p className={css.label}>Filters</p>
-        <Field type="checkbox" name="equipment" value="AC" />
-        <span>AC</span>
-        <Field type="checkbox" name="equipment" value="Automatic" />
-        <span>Automatic</span>
-        <Field type="checkbox" name="equipment" value="Kitchen" />
-        <span>Kitchen</span>
-        <Field type="checkbox" name="equipment" value="TV" />
-        <span>TV</span>
-        <Field type="checkbox" name="equipment" value="Shower/WC" />
-        <span>Shower/WC</span>
-        <Field type="radio" name="type" value="Van" />
-        <span>Van</span>
-        <Field type="radio" name="type" value="Fully Integrated" />
-        <span>Fully Integrated</span>
-        <Field type="radio" name="type" value="Alcove" />
-        <span>Alcove</span>
+        <p className={css.subformTitle}>Filters</p>
+        <div className={css.selectEquipmentContainer}>
+          <label className={css.equipmentLabel} htmlFor="AC">
+            <Field
+              className={css.originalCheckBox}
+              type="checkbox"
+              name="equipment"
+              value="AC"
+              id="AC"
+            />
+            <div className={css.equipmentButton}>
+              <svg className={css.checkboxImage} width="20" height="20">
+                <use href="/src/img/sprite.svg#icon-ac"></use>
+              </svg>
+              <svg className={css.checkboxImage} width="32" height="32">
+                <use href="/src/img/sprite.svg#icon-ac"></use>
+              </svg>
+              <span>AC</span>
+            </div>
+          </label>
+          <label className={css.equipmentLabel} htmlFor="Automatic">
+            <Field
+              className={css.originalCheckBox}
+              type="checkbox"
+              name="equipment"
+              value="Automatic"
+              id="Automatic"
+            />
+            <div className={css.equipmentButton}>
+              <svg className={css.checkboxImage} width="20" height="20">
+                <use href="/src/img/sprite.svg#icon-ac"></use>
+              </svg>
+              <svg className={css.checkboxImage} width="32" height="32">
+                <use href="/src/img/sprite.svg#icon-ac"></use>
+              </svg>
+              <span>Automatic</span>
+            </div>
+          </label>
+          <label className={css.equipmentLabel} htmlFor="Kitchen">
+            <Field
+              className={css.originalCheckBox}
+              type="checkbox"
+              name="equipment"
+              value="Kitchen"
+              id="Kitchen"
+            />
+            <div className={css.equipmentButton}>
+              <svg className={css.checkboxImage} width="20" height="20">
+                <use href="/src/img/sprite.svg#icon-ac"></use>
+              </svg>
+              <svg className={css.checkboxImage} width="32" height="32">
+                <use href="/src/img/sprite.svg#icon-ac"></use>
+              </svg>
+              <span>Kitchen</span>
+            </div>
+          </label>
+          <label className={css.equipmentLabel} htmlFor="TV">
+            <Field
+              className={css.originalCheckBox}
+              type="checkbox"
+              name="equipment"
+              value="TV"
+              id="TV"
+            />
+            <div className={css.equipmentButton}>
+              <svg className={css.checkboxImage} width="20" height="20">
+                <use href="/src/img/sprite.svg#icon-ac"></use>
+              </svg>
+              <svg className={css.checkboxImage} width="32" height="32">
+                <use href="/src/img/sprite.svg#icon-ac"></use>
+              </svg>
+              <span>TV</span>
+            </div>
+          </label>
+          <label className={css.equipmentLabel} htmlFor="Shower/WC">
+            <Field
+              className={css.originalCheckBox}
+              type="checkbox"
+              name="equipment"
+              value="Shower/WC"
+              id="Shower/WC"
+            />
+            <div className={css.equipmentButton}>
+              <svg className={css.checkboxImage} width="20" height="20">
+                <use href="/src/img/sprite.svg#icon-ac"></use>
+              </svg>
+              <svg className={css.checkboxImage} width="32" height="32">
+                <use href="/src/img/sprite.svg#icon-ac"></use>
+              </svg>
+              <span>Shower/WC</span>
+            </div>
+          </label>
+        </div>
+        <h3>Vehicle type</h3>
+        <div className={css.selectEquipmentContainer}>
+          <label className={css.equipmentLabel} htmlFor="Van">
+            <Field
+              className={css.originalCheckBox}
+              type="radio"
+              name="type"
+              value="panelTruck"
+              id="Van"
+            />
+            <div className={css.equipmentButton}>
+              <svg className={css.checkboxImage} width="20" height="20">
+                <use href="/src/img/sprite.svg#icon-ac"></use>
+              </svg>
+              <svg className={css.checkboxImage} width="32" height="32">
+                <use href="/src/img/sprite.svg#icon-ac"></use>
+              </svg>
+              <span>Van</span>
+            </div>
+          </label>
+          <label className={css.equipmentLabel} htmlFor="Integrated">
+            <Field
+              className={css.originalCheckBox}
+              type="radio"
+              name="type"
+              value="fullyIntegrated"
+              id="Integrated"
+            />
+            <div className={css.equipmentButton}>
+              <svg className={css.checkboxImage} width="20" height="20">
+                <use href="/src/img/sprite.svg#icon-ac"></use>
+              </svg>
+              <svg className={css.checkboxImage} width="32" height="32">
+                <use href="/src/img/sprite.svg#icon-ac"></use>
+              </svg>
+              <span>Fully Integrated</span>
+            </div>
+          </label>
+          <label className={css.equipmentLabel} htmlFor="Alcove">
+            <Field
+              className={css.originalCheckBox}
+              type="radio"
+              name="type"
+              value="Alcove"
+              id="Alcove"
+            />
+            <div className={css.equipmentButton}>
+              <svg className={css.checkboxImage} width="20" height="20">
+                <use href="/src/img/sprite.svg#icon-ac"></use>
+              </svg>
+              <svg className={css.checkboxImage} width="32" height="32">
+                <use href="/src/img/sprite.svg#icon-ac"></use>
+              </svg>
+              <span>Alcove</span>
+            </div>
+          </label>
+        </div>
         <button type="submit">Search</button>
       </Form>
     </Formik>

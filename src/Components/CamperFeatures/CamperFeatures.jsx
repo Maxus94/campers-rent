@@ -31,6 +31,8 @@ const CamperFeatures = () => {
         {details.CD > 0 && <li>CD</li>}
         {details.radio > 0 && <li>Radio</li>}
         {details.hob > 0 && <li>{details.hob} hob</li>}
+        {details.TV > 0 && <li>TV</li>}
+        {details.shower > 0 && details.toilet > 0 && <li>Shower/WC</li>}
       </ul>
       <h2>Vehicle details</h2>
       <ul>
