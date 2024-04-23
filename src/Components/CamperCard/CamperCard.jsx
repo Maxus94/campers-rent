@@ -54,7 +54,7 @@ const CamperCard = ({
           <div className={css.cardHeader}>
             <p>{name}</p>
             <span>
-              &#8364;{price}
+              &#8364;{price + ".00"}
               <button
                 className={css.favoritesButton}
                 type="button"
@@ -74,22 +74,62 @@ const CamperCard = ({
             </span>
           </div>
           <p className={css.ratingLocation}>
-            <span>
-              <svg className={css.starImage} width="16" height="16">
-                <use href="/src/img/sprite.svg#icon-star"></use>
-              </svg>
+            <svg className={css.starImage} width="16" height="16">
+              <use href="/src/img/sprite.svg#icon-star"></use>
+            </svg>
+            <span className={css.ratingUnderline}>
+              {rating}({reviews.length} Reviews)
             </span>
-            {rating}({reviews.length} Reviews)<span>{location}</span>
+            <svg className={css.locationImage} width="16" height="16">
+              <use href="/src/img/sprite.svg#icon-location"></use>
+            </svg>
+            {location}
           </p>
           <p className={css.camperDescription}>{description}</p>
         </div>
         <ul className={css.camperDetails}>
-          <li>{adults} adults</li>
-          <li>{transmission}</li>
-          <li>{engine}</li>
-          {details.kitchen > 0 && <li>Kitchen</li>}
-          {details.beds > 0 && <li>{details.beds} beds</li>}
-          {details.airConditioner > 0 && <li>AC</li>}
+          <li className={css.camperDetailItem}>
+            <svg className={css.camperDetailImage} width="20" height="20">
+              <use href="/src/img/sprite.svg#icon-users"></use>
+            </svg>
+            {adults} adults
+          </li>
+          <li className={css.camperDetailItem + " " + css.capitalised}>
+            <svg className={css.camperDetailImage} width="20" height="20">
+              <use href="/src/img/sprite.svg#icon-gearbox"></use>
+            </svg>
+            {transmission}
+          </li>
+          <li className={css.camperDetailItem + " " + css.capitalised}>
+            <svg className={css.camperDetailImage} width="20" height="20">
+              <use href="/src/img/sprite.svg#icon-fuel-type"></use>
+            </svg>
+            {engine}
+          </li>
+          {details.kitchen > 0 && (
+            <li className={css.camperDetailItem}>
+              <svg className={css.camperDetailImage} width="20" height="20">
+                <use href="/src/img/sprite.svg#icon-kitchen"></use>
+              </svg>
+              Kitchen
+            </li>
+          )}
+          {details.beds > 0 && (
+            <li className={css.camperDetailItem}>
+              <svg className={css.camperDetailImage} width="20" height="20">
+                <use href="/src/img/sprite.svg#icon-users"></use>
+              </svg>
+              {details.beds} beds
+            </li>
+          )}
+          {details.airConditioner > 0 && (
+            <li className={css.camperDetailItem}>
+              <svg className={css.camperDetailImage} width="20" height="20">
+                <use href="/src/img/sprite.svg#icon-users"></use>
+              </svg>
+              AC
+            </li>
+          )}
         </ul>
         <button
           className={css.showMoreButton}
