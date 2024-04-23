@@ -1,10 +1,12 @@
+import css from "./BookCamper.module.css";
+
 const BookCamper = () => {
   const handleSubmit = (evt) => {
     evt.preventDefault();
     console.log(evt.target.email.value);
   };
   return (
-    <div>
+    <div className={css.bookCamperForm}>
       <h2>Book your campervan now</h2>
       <p>Stay connected! We are always ready to help you.</p>
       <form action="submit" onSubmit={handleSubmit}>

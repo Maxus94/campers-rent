@@ -15,6 +15,7 @@ export const Modal = () => {
   const { name, price, rating, reviews, location, description, gallery } =
     useSelector(selectCamper);
   const dispatch = useDispatch();
+  let style = featuresActive;
 
   useEffect(() => {
     const handleKeyDown = (evt) => {
@@ -51,13 +52,24 @@ export const Modal = () => {
               // dispatch(cleanCamper());
             }}
           >
-            X
+            <svg className={css.closeImage} width="32" height="32">
+              <use href="/src/img/sprite.svg#icon-close-window"></use>
+            </svg>
           </button>
         </div>
-        <p>
-          {rating}({reviews.length} reviews)<span>{location}</span>
+        <p className={css.ratingLocationContainer}>
+          <svg className={css.starImage} width="16" height="16">
+            <use href="/src/img/sprite.svg#icon-star"></use>
+          </svg>
+          <span className={css.ratingUnderline}>
+            {rating}({reviews.length} reviews)
+          </span>
+          <svg className={css.locationImage} width="16" height="16">
+            <use href="/src/img/sprite.svg#icon-location"></use>
+          </svg>
+          {location}
         </p>
-        <p>{price}</p>
+        <p className={css.camperPrice}>&#8364;{price + ".00"}</p>
         <div className={css.camperPicturesContainer}>
           {gallery.map((camper) => (
             <img
@@ -68,12 +80,13 @@ export const Modal = () => {
             />
           ))}
         </div>
-        <p>{description}</p>
+        <p className={css.camperDescription}>{description}</p>
         <ul className={css.switchButtonsContainer}>
           <li>
             <button
               // className={featuresActive}
               className={css.switchButton}
+              // css.switchButton + " " + `${featuresActive.toString()}`
               type="button"
               onClick={() => {
                 setFeaturesActive("css.isActive");
@@ -98,9 +111,9 @@ export const Modal = () => {
           </li>
         </ul>
         <div className={css.featuresReviewsContainer}>
-        {featuresActive === "css.isActive" && <CamperFeatures />}
-        {reviewsActive === "css.isActive" && <CamperReviews />}
-        <BookCamper/> 
+          {featuresActive === "css.isActive" && <CamperFeatures />}
+          {reviewsActive === "css.isActive" && <CamperReviews />}
+          <BookCamper />
         </div>
       </div>
     </div>

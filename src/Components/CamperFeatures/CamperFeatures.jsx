@@ -17,7 +17,7 @@ const CamperFeatures = () => {
     height,
   } = useSelector(selectCamper);
   return (
-    <div className={css.featuresReviewsContainer}>
+    <div className={css.featuresContainer}>
       <ul>
         <li>{adults} adults</li>
         <li>{transmission}</li>
