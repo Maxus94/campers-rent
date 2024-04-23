@@ -10,9 +10,16 @@
     row-gap: 8px;
 }
 
-.subformTitle {
-    color: var(--grey);
-    margin-bottom: 8px;
+.subformLocationTitle {
+    font-weight: 500;
+    line-height: 1.5;
+    position: relative;
+}
+
+.subformFiltersTitle {
+    margin-bottom: 14px;
+    font-weight: 500;
+    line-height: 1.5;
 }
 
 .equipmentLabel {
@@ -24,19 +31,22 @@
     /* stroke: black; */
     /* width: 1em; */
     /* height: 1em; */
-    stroke-width: 1;
-    stroke: currentColor;
+    /* stroke-width: 1; */
+    stroke: var(--black);
+    /* stroke: currentColor; */
     /* fill: currentColor; */
 }
 
 .equipmentButton {
     border-width: 1px;
     border-radius: 10px;
-    border-color: black 20%;
+    border-color: var(--black-for-button-border);
     border-style: solid;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    gap: 8px;
     cursor: pointer;
     width: 100%;
     height: 95px;
@@ -49,4 +59,86 @@
 
 .originalCheckBox:checked+.equipmentButton {
     border-color: var(--red);
+}
+
+.typeCamper {
+    text-align: center;
+    font-weight: 500;
+    line-height: 1.25;
+}
+
+.fieldsGroup {
+    border: none;
+    padding: 0;
+    margin: 0 0 32px;
+}
+
+.filtersType {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1.2;
+    margin-bottom: 24px;
+}
+
+.filtersType::after {
+    margin-top: 24px;
+    display: block;
+    content: "";
+    width: 360px;
+    height: 1px;
+    background-color: #1A101828;
+}
+
+.searchButton {
+    margin-top: 32px;
+    border-radius: 200px;
+    padding: 16px 60px;
+    width: 173px;
+    height: 56px;
+    background-color: var(--red);
+    border: none;
+    color: white;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: -0.01em;
+    cursor: pointer;
+}
+
+.searchButton:hover,
+.searchButton:focus {
+    background-color: var(--red-hover);
+}
+
+.locationInput {
+    margin-top: 8px;
+    border-radius: 10px;
+    padding: 18px 18px 18px 44px;
+    width: 360px;
+    height: 56px;
+    background-color: var(--dark-white);
+    border: none;
+    color: var(--black);
+    outline: none;
+}
+
+.locationInput::placeholder {
+    color: rgba(16, 24, 40, 0.6);
+}
+
+.locationImage {
+    position: absolute;
+    bottom: 0;
+    left: 18px;
+    fill: white;
+    /* stroke: black; */
+    /* width: 1em; */
+    /* height: 1em; */
+    /* stroke-width: 1; */
+    stroke: var(--black);
+    /* stroke: currentColor; */
+    /* fill: currentColor; */
+}
+
+.locationInput:placeholder-shown+.locationImage {
+    stroke: rgba(16, 24, 40, 0.6);
 }

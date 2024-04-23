@@ -34,7 +34,6 @@ const CamperCard = ({
     height,
   },
 }) => {
-  console.log(details);
   const dispatch = useDispatch();
   const modalIsShown = useSelector(selectModal);
   const favorites = useSelector(selectFavorites);
@@ -50,8 +49,8 @@ const CamperCard = ({
     <div className={css.cardContainer}>
       <img className={css.camperPicture} src={gallery[0]} alt="" />
       {/* <div className={css.camperPicture}></div> */}
-      <div>
-        <div>
+      <div className={css.camperInfoContainer}>
+        <div className={css.cardHeaderBlock}>
           <div className={css.cardHeader}>
             <p>{name}</p>
             <span>
@@ -74,7 +73,12 @@ const CamperCard = ({
               </button>
             </span>
           </div>
-          <p>
+          <p className={css.ratingLocation}>
+            <span>
+              <svg className={css.starImage} width="16" height="16">
+                <use href="/src/img/sprite.svg#icon-star"></use>
+              </svg>
+            </span>
             {rating}({reviews.length} Reviews)<span>{location}</span>
           </p>
           <p className={css.camperDescription}>{description}</p>

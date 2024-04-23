@@ -57,10 +57,7 @@ const CampersCatalog = () => {
   useEffect(() => {
     const formCampersList = async () => {
       // setLoading(true);
-      console.log(page);
       try {
-        console.log("fetch");
-        console.log(filters);
         const data = await fetchCampers(page);
         if (data.length < 4) {
           setLoadMoreIsVisible(false);
@@ -80,8 +77,8 @@ const CampersCatalog = () => {
   return (
     <div className={css.catalogContainer}>
       <FilterCampers campersFilter={campersFilter} />
-      <div>
-        <ul>
+      <div className={css.cardsContainer}>
+        <ul className={css.campersList}>
           {campers
             .filter(
               (camper) =>
@@ -105,7 +102,11 @@ const CampersCatalog = () => {
             ))}
         </ul>
         {loadMoreIsVisible && (
-          <button type="button" onClick={() => dispatch(nextPage())}>
+          <button
+            className={css.loadMore}
+            type="button"
+            onClick={() => dispatch(nextPage())}
+          >
             Load more
           </button>
         )}
