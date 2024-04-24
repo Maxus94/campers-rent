@@ -21,9 +21,9 @@ This project helps you to find a proper camper for travelling. There are 3 pages
 
 ## Launch
 
-Project starts on Windows versions 8.1 and later
-deployed on netlify.com (https://campers-rent.netlify.app/)
-[Visit link to start campers rent project](https://campers-rent.netlify.app/)
+- Project starts on Windows versions 8.1 and later
+- Deployed on netlify.com (https://campers-rent.netlify.app/)
+- [Visit link to start campers rent project](https://campers-rent.netlify.app/)
 
 ## Setup on your computer
 
