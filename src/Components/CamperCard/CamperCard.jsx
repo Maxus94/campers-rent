@@ -117,7 +117,7 @@ const CamperCard = ({
           {details.beds > 0 && (
             <li className={css.camperDetailItem}>
               <svg className={css.camperDetailImage} width="20" height="20">
-                <use href="/src/img/sprite.svg#icon-users"></use>
+                <use href="/src/img/sprite.svg#icon-bed"></use>
               </svg>
               {details.beds} beds
             </li>
@@ -125,7 +125,7 @@ const CamperCard = ({
           {details.airConditioner > 0 && (
             <li className={css.camperDetailItem}>
               <svg className={css.camperDetailImage} width="20" height="20">
-                <use href="/src/img/sprite.svg#icon-users"></use>
+                <use href="/src/img/sprite.svg#icon-ac"></use>
               </svg>
               AC
             </li>

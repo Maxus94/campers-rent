@@ -17,8 +17,10 @@
   background-color: white;
   padding: 40px;
   border-radius: 20px;
+  overflow-x: hidden;
   overflow-y: scroll;
   color: var(--black);
+
 }
 
 .modalHeader {
@@ -136,6 +138,10 @@
 
 .featuresReviewsContainer {
   display: flex;
+  column-gap: 24px;
+  margin-top: 24px;
+  padding-top: 44px;
+  border-top: 1px var(--black-for-button-border) solid;
 }
 
 .closeImage {

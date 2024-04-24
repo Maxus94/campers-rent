@@ -1,3 +1,60 @@
 .bookCamperForm {
     width: 448px;
+    border: 1px solid rgba(16, 24, 40, 0.2);
+    border-radius: 10px;
+    padding: 24px;
+}
+
+.formTitle {
+    margin-bottom: 8px;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1.2;
+}
+
+.sloganText {
+    margin-bottom: 24px;
+    line-height: 1.5;
+    color: var(--grey);
+}
+
+.inputStyles {
+    border: none;
+    border-radius: 10px;
+    padding: 18px 18px 18px 18px;
+    width: 400px;
+    height: 56px;
+    background-color: var(--dark-white);
+    line-height: 1.25;
+    outline: none;
+}
+
+.inputStyles::placeholder {
+    color: rgba(16, 24, 40, 0.6);
+}
+
+.inputStyles:not(:last-child) {
+    margin-bottom: 14px;
+}
+
+.inputTextarea {
+    height: 114px;
+    resize: none;
+}
+
+.sendButton {
+    margin-top: 24px;
+    border: none;
+    border-radius: 200px;
+    padding: 16px 60px;
+    height: 56px;
+    background-color: var(--red);
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: -0.01em;
+    color: #fff;
+}
+
+.sendButton:hover {
+    background-color: var(--red-hover);
 }

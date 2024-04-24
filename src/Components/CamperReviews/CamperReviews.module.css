@@ -1,3 +1,60 @@
 .campersReviewsContainer {
     width: 430px;
+    position: relative;
+}
+
+.underlineActive {
+    position: absolute;
+    width: 85px;
+    height: 5px;
+    background-color: var(--red);
+    top: -47px;
+    left: 125px;
+}
+
+.reviewContainer:not(:last-child) {
+    margin-bottom: 24px;
+}
+
+.reviewerContainer {
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+}
+
+.reviewerIcon {
+    margin-right: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 60px;
+    width: 60px;
+    height: 60px;
+    background-color: var(--light-grey);
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 1.25;
+    color: var(--red);
+}
+
+.reviewerName {
+    margin-bottom: 4px;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.33333;
+}
+
+.reviewText {
+    line-height: 1.5;
+    color: var(--grey);
+}
+
+.golgStar {
+    fill: var(--yellow);
+    margin-right: 4px;
+}
+
+.greyStar {
+    fill: var(--light-grey);
+    margin-right: 4px;
 }
