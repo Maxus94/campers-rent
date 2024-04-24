@@ -48,7 +48,7 @@ const FilterCampers = ({ campersFilter }) => {
               placeholder="City"
             />
             <svg className={css.locationImage} width="18" height="20">
-              <use href="./src/img/sprite.svg#icon-location"></use>
+              <use href="../src/img/sprite.svg#icon-location"></use>
             </svg>
           </label>
         </fieldset>
@@ -67,7 +67,7 @@ const FilterCampers = ({ campersFilter }) => {
               />
               <div className={css.equipmentButton}>
                 <svg className={css.checkboxImage} width="32" height="32">
-                  <use href="./src/img/sprite.svg#icon-ac"></use>
+                  <use href="../src/img/sprite.svg#icon-ac"></use>
                 </svg>
                 <span>AC</span>
               </div>
@@ -82,7 +82,7 @@ const FilterCampers = ({ campersFilter }) => {
               />
               <div className={css.equipmentButton}>
                 <svg className={css.checkboxImage} width="32" height="32">
-                  <use href="./src/img/sprite.svg#icon-gearbox"></use>
+                  <use href="../src/img/sprite.svg#icon-gearbox"></use>
                 </svg>
                 <span>Automatic</span>
               </div>
