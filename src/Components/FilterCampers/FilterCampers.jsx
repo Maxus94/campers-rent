@@ -48,7 +48,7 @@ const FilterCampers = ({ campersFilter }) => {
               placeholder="City"
             />
             <svg className={css.locationImage} width="18" height="20">
-              <use href="../src/img/sprite.svg#icon-location"></use>
+              <use href="src/img/sprite.svg#icon-location"></use>
             </svg>
           </label>
         </fieldset>
