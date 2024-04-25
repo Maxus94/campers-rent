@@ -3,6 +3,7 @@ import { selectFilters } from "../../store/selectors";
 import { Field, Form, Formik } from "formik";
 import { changeFilter } from "../../store/filterSlice";
 import css from "./FilterCampers.module.css";
+import sprite from "../../img/sprite.svg";
 
 const FilterCampers = ({ campersFilter }) => {
   const filters = useSelector(selectFilters);
@@ -48,7 +49,8 @@ const FilterCampers = ({ campersFilter }) => {
               placeholder="City"
             />
             <svg className={css.locationImage} width="18" height="20">
-              <use href="../../img/sprite.svg#icon-location"></use>
+              {/* <use href="/src/img/sprite.svg#icon-location"></use> */}
+              <use href={sprite + "#icon-location"}></use>
             </svg>
           </label>
         </fieldset>
