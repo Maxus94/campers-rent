@@ -49,7 +49,6 @@ const FilterCampers = ({ campersFilter }) => {
               placeholder="City"
             />
             <svg className={css.locationImage} width="18" height="20">
-              {/* <use href="/src/img/sprite.svg#icon-location"></use> */}
               <use href={sprite + "#icon-location"}></use>
             </svg>
           </label>
@@ -69,7 +68,7 @@ const FilterCampers = ({ campersFilter }) => {
               />
               <div className={css.equipmentButton}>
                 <svg className={css.checkboxImage} width="32" height="32">
-                  <use href="../src/img/sprite.svg#icon-ac"></use>
+                  <use href={sprite + "#icon-ac"}></use>
                 </svg>
                 <span>AC</span>
               </div>
@@ -84,7 +83,7 @@ const FilterCampers = ({ campersFilter }) => {
               />
               <div className={css.equipmentButton}>
                 <svg className={css.checkboxImage} width="32" height="32">
-                  <use href="../src/img/sprite.svg#icon-gearbox"></use>
+                  <use href={sprite + "#icon-gearbox"}></use>
                 </svg>
                 <span>Automatic</span>
               </div>
@@ -99,7 +98,7 @@ const FilterCampers = ({ campersFilter }) => {
               />
               <div className={css.equipmentButton}>
                 <svg className={css.checkboxImage} width="32" height="32">
-                  <use href="/src/img/sprite.svg#icon-kitchen"></use>
+                  <use href={sprite + "#icon-kitchen"}></use>
                 </svg>
                 <span>Kitchen</span>
               </div>
@@ -114,7 +113,7 @@ const FilterCampers = ({ campersFilter }) => {
               />
               <div className={css.equipmentButton}>
                 <svg className={css.checkboxImage} width="32" height="32">
-                  <use href="/src/img/sprite.svg#icon-tv"></use>
+                  <use href={sprite + "#icon-tv"}></use>
                 </svg>
                 <span>TV</span>
               </div>
@@ -129,7 +128,7 @@ const FilterCampers = ({ campersFilter }) => {
               />
               <div className={css.equipmentButton}>
                 <svg className={css.checkboxImage} width="32" height="32">
-                  <use href="/src/img/sprite.svg#icon-shover"></use>
+                  <use href={sprite + "#icon-shover"}></use>
                 </svg>
                 <span>Shower/WC</span>
               </div>
@@ -149,7 +148,7 @@ const FilterCampers = ({ campersFilter }) => {
               />
               <div className={css.equipmentButton}>
                 <svg className={css.checkboxImage} width="40" height="28">
-                  <use href="/src/img/sprite.svg#icon-van"></use>
+                  <use href={sprite + "#icon-van"}></use>
                 </svg>
                 <span className={css.typeCamper}>Van</span>
               </div>
@@ -164,7 +163,7 @@ const FilterCampers = ({ campersFilter }) => {
               />
               <div className={css.equipmentButton}>
                 <svg className={css.checkboxImage} width="40" height="28">
-                  <use href="/src/img/sprite.svg#icon-fully-integrated"></use>
+                  <use href={sprite + "#icon-fully-integrated"}></use>
                 </svg>
                 <span className={css.typeCamper}>Fully Integrated</span>
               </div>
@@ -179,7 +178,7 @@ const FilterCampers = ({ campersFilter }) => {
               />
               <div className={css.equipmentButton}>
                 <svg className={css.checkboxImage} width="40" height="28">
-                  <use href="/src/img/sprite.svg#icon-alcove"></use>
+                  <use href={sprite + "#icon-alcove"}></use>
                 </svg>
                 <span className={css.typeCamper}>Alcove</span>
               </div>

@@ -12,6 +12,8 @@ import {
 
 import css from "./CamperCard.module.css";
 
+import sprite from "../../img/sprite.svg";
+
 const CamperCard = ({
   camper: {
     _id,
@@ -67,7 +69,7 @@ const CamperCard = ({
                         ? css.inFavorites
                         : css.notInFavorites
                     }
-                    href="/src/img/sprite.svg#icon-heart1"
+                    href={sprite + "#icon-heart1"}
                   ></use>
                 </svg>
               </button>
@@ -75,13 +77,13 @@ const CamperCard = ({
           </div>
           <p className={css.ratingLocation}>
             <svg className={css.starImage} width="16" height="16">
-              <use href="/src/img/sprite.svg#icon-star"></use>
+              <use href={sprite + "#icon-star"}></use>
             </svg>
             <span className={css.ratingUnderline}>
               {rating}({reviews.length} Reviews)
             </span>
             <svg className={css.locationImage} width="16" height="16">
-              <use href="/src/img/sprite.svg#icon-location"></use>
+              <use href={sprite + "#icon-location"}></use>
             </svg>
             {location}
           </p>
@@ -90,26 +92,26 @@ const CamperCard = ({
         <ul className={css.camperDetails}>
           <li className={css.camperDetailItem}>
             <svg className={css.camperDetailImage} width="20" height="20">
-              <use href="/src/img/sprite.svg#icon-users"></use>
+              <use href={sprite + "#icon-users"}></use>
             </svg>
             {adults} adults
           </li>
           <li className={css.camperDetailItem + " " + css.capitalised}>
             <svg className={css.camperDetailImage} width="20" height="20">
-              <use href="/src/img/sprite.svg#icon-gearbox"></use>
+              <use href={sprite + "#icon-gearbox"}></use>
             </svg>
             {transmission}
           </li>
           <li className={css.camperDetailItem + " " + css.capitalised}>
             <svg className={css.camperDetailImage} width="20" height="20">
-              <use href="/src/img/sprite.svg#icon-fuel-type"></use>
+              <use href={sprite + "#icon-fuel-type"}></use>
             </svg>
             {engine}
           </li>
           {details.kitchen > 0 && (
             <li className={css.camperDetailItem}>
               <svg className={css.camperDetailImage} width="20" height="20">
-                <use href="/src/img/sprite.svg#icon-kitchen"></use>
+                <use href={sprite + "#icon-kitchen"}></use>
               </svg>
               Kitchen
             </li>
@@ -117,7 +119,7 @@ const CamperCard = ({
           {details.beds > 0 && (
             <li className={css.camperDetailItem}>
               <svg className={css.camperDetailImage} width="20" height="20">
-                <use href="/src/img/sprite.svg#icon-bed"></use>
+                <use href={sprite + "#icon-bed"}></use>
               </svg>
               {details.beds} beds
             </li>
@@ -125,7 +127,7 @@ const CamperCard = ({
           {details.airConditioner > 0 && (
             <li className={css.camperDetailItem}>
               <svg className={css.camperDetailImage} width="20" height="20">
-                <use href="/src/img/sprite.svg#icon-ac"></use>
+                <use href={sprite + "#icon-ac"}></use>
               </svg>
               AC
             </li>
@@ -168,39 +170,3 @@ const CamperCard = ({
 };
 
 export default CamperCard;
-
-{
-  /* 
-const [featuresActive, setFeaturesActive] = useState("css.isActive");
-  const [reviewsActive, setReviewsActive] = useState("css.notActive");
-  console.log(name);
-  <p></p>
-<ul>
-  <li>
-    <button
-      className={featuresActive}
-      type="button"
-      onClick={() => {
-        setFeaturesActive("css.isActive");
-        setReviewsActive("css.notActive");
-      }}
-    >
-      Features
-    </button>
-  </li>
-  <li>
-    <button
-      className={reviewsActive}
-      type="button"
-      onClick={() => {
-        setReviewsActive("css.isActive");
-        setFeaturesActive("css.notActive");
-      }}
-    >
-      Reviews
-    </button>
-  </li>
-</ul>
-{featuresActive === "css.isActive" && <CamperFeatures />}
-{reviewsActive === "css.isActive" && <CamperReviews />} */
-}

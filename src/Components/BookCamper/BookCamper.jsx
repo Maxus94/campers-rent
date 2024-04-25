@@ -9,27 +9,12 @@ const BookCamper = () => {
     const date = new Date(evt.target.date.value);
     const curDate = Date.now();
     console.log(date.getTime(), curDate);
-    // if (!evt.target.name.value) {
-    //   alert("Name must be filled up");
-    // }
-    // if (!evt.target.email.value) {
-    //   alert("Email must be filled up");
-    // }
+
     if (curDate > date.getTime()) {
       alert("Date must be in future");
     } else {
       evt.target.reset();
     }
-
-    // if (
-    //   evt.target.name.value &&
-    //   evt.target.email.value &&
-    //   evt.target.date.value
-    // ) {
-    //   evt.target.reset();
-    // } else {
-    //   alert("Name, Email and Date must be filled up!");
-    // }
   };
   return (
     <div className={css.bookCamperForm}>

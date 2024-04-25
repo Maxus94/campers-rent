@@ -3,6 +3,8 @@ import BookCamper from "../BookCamper/BookCamper";
 import { selectCamper } from "../../store/selectors";
 import css from "./CamperReviews.module.css";
 
+import sprite from "../../img/sprite.svg";
+
 const CamperReviews = () => {
   const { reviews } = useSelector(selectCamper);
   console.log(reviews);
@@ -12,19 +14,19 @@ const CamperReviews = () => {
         return (
           <div>
             <svg className={css.golgStar} width="16" height="16">
-              <use href="/src/img/sprite.svg#icon-star"></use>
+              <use href={sprite + "#icon-star"}></use>
             </svg>
             <svg className={css.greyStar} width="16" height="16">
-              <use href="/src/img/sprite.svg#icon-star"></use>
+              <use href={sprite + "#icon-star"}></use>
             </svg>
             <svg className={css.greyStar} width="16" height="16">
-              <use href="/src/img/sprite.svg#icon-star"></use>
+              <use href={sprite + "#icon-star"}></use>
             </svg>
             <svg className={css.greyStar} width="16" height="16">
-              <use href="/src/img/sprite.svg#icon-star"></use>
+              <use href={sprite + "#icon-star"}></use>
             </svg>
             <svg className={css.greyStar} width="16" height="16">
-              <use href="/src/img/sprite.svg#icon-star"></use>
+              <use href={sprite + "#icon-star"}></use>
             </svg>
           </div>
         );
@@ -32,19 +34,19 @@ const CamperReviews = () => {
         return (
           <div>
             <svg className={css.golgStar} width="16" height="16">
-              <use href="/src/img/sprite.svg#icon-star"></use>
+              <use href={sprite + "#icon-star"}></use>
             </svg>
             <svg className={css.golgStar} width="16" height="16">
-              <use href="/src/img/sprite.svg#icon-star"></use>
+              <use href={sprite + "#icon-star"}></use>
             </svg>
             <svg className={css.greyStar} width="16" height="16">
-              <use href="/src/img/sprite.svg#icon-star"></use>
+              <use href={sprite + "#icon-star"}></use>
             </svg>
             <svg className={css.greyStar} width="16" height="16">
-              <use href="/src/img/sprite.svg#icon-star"></use>
+              <use href={sprite + "#icon-star"}></use>
             </svg>
             <svg className={css.greyStar} width="16" height="16">
-              <use href="/src/img/sprite.svg#icon-star"></use>
+              <use href={sprite + "#icon-star"}></use>
             </svg>
           </div>
         );
@@ -52,19 +54,19 @@ const CamperReviews = () => {
         return (
           <div>
             <svg className={css.golgStar} width="16" height="16">
-              <use href="/src/img/sprite.svg#icon-star"></use>
+              <use href={sprite + "#icon-star"}></use>
             </svg>
             <svg className={css.golgStar} width="16" height="16">
-              <use href="/src/img/sprite.svg#icon-star"></use>
+              <use href={sprite + "#icon-star"}></use>
             </svg>
             <svg className={css.golgStar} width="16" height="16">
-              <use href="/src/img/sprite.svg#icon-star"></use>
+              <use href={sprite + "#icon-star"}></use>
             </svg>
             <svg className={css.greyStar} width="16" height="16">
-              <use href="/src/img/sprite.svg#icon-star"></use>
+              <use href={sprite + "#icon-star"}></use>
             </svg>
             <svg className={css.greyStar} width="16" height="16">
-              <use href="/src/img/sprite.svg#icon-star"></use>
+              <use href={sprite + "#icon-star"}></use>
             </svg>
           </div>
         );
@@ -72,19 +74,19 @@ const CamperReviews = () => {
         return (
           <div>
             <svg className={css.golgStar} width="16" height="16">
-              <use href="/src/img/sprite.svg#icon-star"></use>
+              <use href={sprite + "#icon-star"}></use>
             </svg>
             <svg className={css.golgStar} width="16" height="16">
-              <use href="/src/img/sprite.svg#icon-star"></use>
+              <use href={sprite + "#icon-star"}></use>
             </svg>
             <svg className={css.golgStar} width="16" height="16">
-              <use href="/src/img/sprite.svg#icon-star"></use>
+              <use href={sprite + "#icon-star"}></use>
             </svg>
             <svg className={css.golgStar} width="16" height="16">
-              <use href="/src/img/sprite.svg#icon-star"></use>
+              <use href={sprite + "#icon-star"}></use>
             </svg>
             <svg className={css.greyStar} width="16" height="16">
-              <use href="/src/img/sprite.svg#icon-star"></use>
+              <use href={sprite + "#icon-star"}></use>
             </svg>
           </div>
         );
@@ -92,19 +94,19 @@ const CamperReviews = () => {
         return (
           <div>
             <svg className={css.golgStar} width="16" height="16">
-              <use href="/src/img/sprite.svg#icon-star"></use>
+              <use href={sprite + "#icon-star"}></use>
             </svg>
             <svg className={css.golgStar} width="16" height="16">
-              <use href="/src/img/sprite.svg#icon-star"></use>
+              <use href={sprite + "#icon-star"}></use>
             </svg>
             <svg className={css.golgStar} width="16" height="16">
-              <use href="/src/img/sprite.svg#icon-star"></use>
+              <use href={sprite + "#icon-star"}></use>
             </svg>
             <svg className={css.golgStar} width="16" height="16">
-              <use href="/src/img/sprite.svg#icon-star"></use>
+              <use href={sprite + "#icon-star"}></use>
             </svg>
             <svg className={css.golgStar} width="16" height="16">
-              <use href="/src/img/sprite.svg#icon-star"></use>
+              <use href={sprite + "#icon-star"}></use>
             </svg>
           </div>
         );
@@ -112,19 +114,19 @@ const CamperReviews = () => {
         return (
           <div>
             <svg className={css.greyStar} width="16" height="16">
-              <use href="/src/img/sprite.svg#icon-star"></use>
+              <use href={sprite + "#icon-star"}></use>
             </svg>
             <svg className={css.greyStar} width="16" height="16">
-              <use href="/src/img/sprite.svg#icon-star"></use>
+              <use href={sprite + "#icon-star"}></use>
             </svg>
             <svg className={css.greyStar} width="16" height="16">
-              <use href="/src/img/sprite.svg#icon-star"></use>
+              <use href={sprite + "#icon-star"}></use>
             </svg>
             <svg className={css.greyStar} width="16" height="16">
-              <use href="/src/img/sprite.svg#icon-star"></use>
+              <use href={sprite + "#icon-star"}></use>
             </svg>
             <svg className={css.greyStar} width="16" height="16">
-              <use href="/src/img/sprite.svg#icon-star"></use>
+              <use href={sprite + "#icon-star"}></use>
             </svg>
           </div>
         );

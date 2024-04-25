@@ -7,6 +7,8 @@ import CamperFeatures from "../CamperFeatures/CamperFeatures";
 import CamperReviews from "../CamperReviews/CamperReviews";
 import BookCamper from "../BookCamper/BookCamper";
 
+import sprite from "../../img/sprite.svg";
+
 export const Modal = () => {
   const [featuresActive, setFeaturesActive] = useState("css.isActive");
   const [reviewsActive, setReviewsActive] = useState("css.notActive");
@@ -21,7 +23,6 @@ export const Modal = () => {
     const handleKeyDown = (evt) => {
       if (evt.code === "Escape") {
         dispatch(closeModal());
-        // dispatch(cleanCamper());
       }
     };
     document.addEventListener("keydown", handleKeyDown);
@@ -53,19 +54,19 @@ export const Modal = () => {
             }}
           >
             <svg className={css.closeImage} width="32" height="32">
-              <use href="/src/img/sprite.svg#icon-close-window"></use>
+              <use href={sprite + "#icon-close-window"}></use>
             </svg>
           </button>
         </div>
         <p className={css.ratingLocationContainer}>
           <svg className={css.starImage} width="16" height="16">
-            <use href="/src/img/sprite.svg#icon-star"></use>
+            <use href={sprite + "#icon-star"}></use>
           </svg>
           <span className={css.ratingUnderline}>
             {rating}({reviews.length} reviews)
           </span>
           <svg className={css.locationImage} width="16" height="16">
-            <use href="/src/img/sprite.svg#icon-location"></use>
+            <use href={sprite + "#icon-location"}></use>
           </svg>
           {location}
         </p>

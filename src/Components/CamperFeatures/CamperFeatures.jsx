@@ -3,6 +3,8 @@ import BookCamper from "../BookCamper/BookCamper";
 import { selectCamper } from "../../store/selectors";
 import css from "./CamperFeatures.module.css";
 
+import sprite from "../../img/sprite.svg";
+
 const CamperFeatures = () => {
   const {
     adults,
@@ -22,13 +24,13 @@ const CamperFeatures = () => {
       <ul className={css.camperDetails}>
         <li className={css.camperDetailItem}>
           <svg className={css.camperDetailImage} width="20" height="20">
-            <use href="/src/img/sprite.svg#icon-users"></use>
+            <use href={sprite + "#icon-users"}></use>
           </svg>
           {adults} adults
         </li>
         <li className={css.camperDetailItem + " " + css.capitalised}>
           <svg className={css.camperDetailImage} width="20" height="20">
-            <use href="/src/img/sprite.svg#icon-gearbox"></use>
+            <use href={sprite + "#icon-gearbox"}></use>
           </svg>
           {transmission}
         </li>
@@ -37,28 +39,28 @@ const CamperFeatures = () => {
         )}
         <li className={css.camperDetailItem + " " + css.capitalised}>
           <svg className={css.camperDetailImage} width="20" height="20">
-            <use href="/src/img/sprite.svg#icon-fuel-type"></use>
+            <use href={sprite + "#icon-fuel-type"}></use>
           </svg>
           {engine}
         </li>
         {details.kitchen > 0 && (
           <li className={css.camperDetailItem}>
             <svg className={css.camperDetailImage} width="20" height="20">
-              <use href="/src/img/sprite.svg#icon-kitchen"></use>
+              <use href={sprite + "#icon-kitchen"}></use>
             </svg>
             kitchen
           </li>
         )}
         <li className={css.camperDetailItem}>
           <svg className={css.camperDetailImage} width="20" height="20">
-            <use href="/src/img/sprite.svg#icon-bed"></use>
+            <use href={sprite + "#icon-bed"}></use>
           </svg>
           {details.beds} beds
         </li>
         {details.airConditioner > 0 && (
           <li className={css.camperDetailItem}>
             <svg className={css.camperDetailImage} width="20" height="20">
-              <use href="/src/img/sprite.svg#icon-air-cond"></use>
+              <use href={sprite + "#icon-air-cond"}></use>
             </svg>
             {details.airConditioner} air conditioner
           </li>
@@ -66,7 +68,7 @@ const CamperFeatures = () => {
         {details.CD > 0 && (
           <li className={css.camperDetailItem}>
             <svg className={css.camperDetailImage} width="20" height="20">
-              <use href="/src/img/sprite.svg#icon-cd"></use>
+              <use href={sprite + "#icon-cd"}></use>
             </svg>
             CD
           </li>
@@ -74,7 +76,7 @@ const CamperFeatures = () => {
         {details.radio > 0 && (
           <li className={css.camperDetailItem}>
             <svg className={css.camperDetailImage} width="20" height="20">
-              <use href="/src/img/sprite.svg#icon-radio"></use>
+              <use href={sprite + "#icon-radio"}></use>
             </svg>
             Radio
           </li>
@@ -82,7 +84,7 @@ const CamperFeatures = () => {
         {details.hob > 0 && (
           <li className={css.camperDetailItem}>
             <svg className={css.camperDetailImage} width="20" height="20">
-              <use href="/src/img/sprite.svg#icon-hob"></use>
+              <use href={sprite + "#icon-hob"}></use>
             </svg>
             {details.hob} hob
           </li>
@@ -90,7 +92,7 @@ const CamperFeatures = () => {
         {details.TV > 0 && (
           <li className={css.camperDetailItem}>
             <svg className={css.camperDetailImage} width="20" height="20">
-              <use href="/src/img/sprite.svg#icon-tv"></use>
+              <use href={sprite + "#icon-tv"}></use>
             </svg>
             TV
           </li>
@@ -98,7 +100,7 @@ const CamperFeatures = () => {
         {details.shower > 0 && (
           <li className={css.camperDetailItem}>
             <svg className={css.camperDetailImage} width="20" height="20">
-              <use href="/src/img/sprite.svg#icon-shover"></use>
+              <use href={sprite + "#icon-shover"}></use>
             </svg>
             Shower
           </li>
@@ -106,7 +108,7 @@ const CamperFeatures = () => {
         {details.toilet > 0 && (
           <li className={css.camperDetailItem}>
             <svg className={css.camperDetailImage} width="20" height="20">
-              <use href="/src/img/sprite.svg#icon-toilet"></use>
+              <use href={sprite + "#icon-toilet"}></use>
             </svg>
             Toilet
           </li>
@@ -114,7 +116,8 @@ const CamperFeatures = () => {
         {details.freezer > 0 && (
           <li className={css.camperDetailItem}>
             <svg className={css.camperDetailImage} width="20" height="20">
-              <use href="/src/img/sprite.svg#icon-freege"></use>
+              <use href={sprite + "#icon-freege"}></use>
+              <use href="/src/img/sprite.svg#icon-"></use>
             </svg>
             Freezer
           </li>
@@ -122,7 +125,7 @@ const CamperFeatures = () => {
         {details.microwave > 0 && (
           <li className={css.camperDetailItem}>
             <svg className={css.camperDetailImage} width="20" height="20">
-              <use href="/src/img/sprite.svg#icon-freege"></use>
+              <use href={sprite + "#icon-microwave"}></use>
             </svg>
             Microwave
           </li>
@@ -130,7 +133,7 @@ const CamperFeatures = () => {
         {details.gas && (
           <li className={css.camperDetailItem}>
             <svg className={css.camperDetailImage} width="20" height="20">
-              <use href="/src/img/sprite.svg#icon-gaz"></use>
+              <use href={sprite + "#icon-gaz"}></use>
             </svg>
             Gas
           </li>
@@ -138,7 +141,7 @@ const CamperFeatures = () => {
         {details.water && (
           <li className={css.camperDetailItem}>
             <svg className={css.camperDetailImage} width="20" height="20">
-              <use href="/src/img/sprite.svg#icon-water"></use>
+              <use href={sprite + "#icon-water"}></use>
             </svg>
             Water
           </li>
@@ -176,15 +179,3 @@ const CamperFeatures = () => {
 };
 
 export default CamperFeatures;
-
-// name,
-// price,
-// rating,
-// reviews,
-// location,
-// transmission,
-// description,
-// gallery,
-// adults,
-// details,
-// engine,
