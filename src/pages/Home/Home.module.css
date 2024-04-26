@@ -4,6 +4,7 @@
     background-size: cover;
     height: 800px;
     position: relative;
+    color: var(--black);
 }
 
 .homepageLink {
@@ -19,4 +20,19 @@
 .homepageLink:hover,
 .homepageLink:hover:focus {
     background-color: var(--red-hover);
+}
+
+.title {
+    padding-top: 64px;
+    padding-left: 16px;
+    color: var(--red);
+}
+
+.description {
+    padding-left: 16px;
+    margin-top: 32px;
+    font-weight: 600;
+    width: 480px;
+    line-height: 1.2;
+    color: var(--red-hover);
 }
