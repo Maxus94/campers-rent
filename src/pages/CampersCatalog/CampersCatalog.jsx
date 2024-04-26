@@ -17,8 +17,9 @@ const CampersCatalog = () => {
   const [camperShowerWC, setCamperShowerWC] = useState(0);
   const [camperGearBox, setCamperGearBox] = useState("");
   const [loadMoreIsVisible, setLoadMoreIsVisible] = useState(true);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
   const page = useSelector(selectPage);
-  const filters = useSelector(selectFilters);
   const dispatch = useDispatch();
   const campersFilter = (
     location,
@@ -39,19 +40,18 @@ const CampersCatalog = () => {
   };
   useEffect(() => {
     const formCampersList = async () => {
-      // setLoading(true);
+      setLoading(true);
+      setError(null);
       try {
         const data = await fetchCampers(page);
         if (data.length < 4) {
           setLoadMoreIsVisible(false);
         }
         setCampers([...campers, ...data]);
-        // setCampers((prevState) => [...prevState, ...data]);
-      } catch (error) {
-        console.log(error);
-        // setError(error.message);
+      } catch (err) {
+        setError(err.message);
       } finally {
-        // setLoading(false);
+        setLoading(false);
       }
     };
     formCampersList();
@@ -84,7 +84,13 @@ const CampersCatalog = () => {
               </li>
             ))}
         </ul>
-        {loadMoreIsVisible && (
+        {loading && (
+          <p className={css.loadingMessage}>
+            Please wait, loading information...
+          </p>
+        )}
+        {error && <p className={css.errorMessage}>Error! {error}</p>}
+        {!loading && !error && loadMoreIsVisible && (
           <button
             className={css.loadMore}
             type="button"

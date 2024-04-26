@@ -34,3 +34,15 @@
     flex-wrap: wrap;
     justify-content: center;
 }
+
+.errorMessage {
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--red);
+}
+
+.loadingMessage {
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--grey);
+}

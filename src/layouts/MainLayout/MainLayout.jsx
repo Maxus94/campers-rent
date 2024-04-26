@@ -7,9 +7,7 @@ const MainLayout = () => {
   return (
     <div className={css.mainContainer}>
       <Header />
-      {/* <Suspense fallback={<div>Loading page...</div>}> */}
       <Outlet />
-      {/* </Suspense> */}
     </div>
   );
 };
