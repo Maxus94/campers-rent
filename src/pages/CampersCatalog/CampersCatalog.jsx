@@ -16,7 +16,6 @@ const CampersCatalog = () => {
   const [camperTV, setCamperTV] = useState(0);
   const [camperShowerWC, setCamperShowerWC] = useState(0);
   const [camperGearBox, setCamperGearBox] = useState("");
-  const [camperFilter, setCamperFilter] = useState(null);
   const [loadMoreIsVisible, setLoadMoreIsVisible] = useState(true);
   const page = useSelector(selectPage);
   const filters = useSelector(selectFilters);
@@ -37,22 +36,6 @@ const CampersCatalog = () => {
     setCamperKitchen(kitchen);
     setCamperTV(TV);
     setCamperShowerWC(showerWC);
-  };
-  const handleFilter = () => {
-    console.log(filters);
-    return campers.filter((camper) =>
-      camper.location
-        .toLowerCase()
-        .includes(
-          filters.location.toLowerCase() &&
-            camper.form.toLowerCase().includes(filters.form.toLowerCase())
-        )
-    );
-    // .filter((camper) =>
-    //   camper.form.toLowerCase().includes(filters.form.toLowerCase())
-    // );
-    // .filter((camper) => camper.form.includes(filters.form));
-    // .filter((camper) => camper.form === filters.form);
   };
   useEffect(() => {
     const formCampersList = async () => {

@@ -14,7 +14,6 @@ function App() {
       <Routes>
         <Route path="/" element={<MainLayout />}>
           <Route index element={<Home />} />
-          {/* <Route path="/" element={<Home />} /> */}
           <Route path="/catalog" element={<CampersCatalog />} />
           <Route path="/favorites" element={<CampersFavorites />} />
           <Route path="*" element={<Home />} />
@@ -25,5 +24,3 @@ function App() {
   );
 }
 export default App;
-
-// {modalIsShown &&
