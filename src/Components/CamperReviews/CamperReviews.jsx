@@ -1,5 +1,4 @@
 import { useSelector } from "react-redux";
-import BookCamper from "../BookCamper/BookCamper";
 import { selectCamper } from "../../store/selectors";
 import css from "./CamperReviews.module.css";
 
@@ -8,129 +7,20 @@ import sprite from "../../img/sprite.svg";
 const CamperReviews = () => {
   const { reviews } = useSelector(selectCamper);
   console.log(reviews);
-  const makeStars = (numberOfStars) => {
-    switch (numberOfStars) {
-      case 1:
-        return (
-          <div>
-            <svg className={css.golgStar} width="16" height="16">
-              <use href={sprite + "#icon-star"}></use>
-            </svg>
-            <svg className={css.greyStar} width="16" height="16">
-              <use href={sprite + "#icon-star"}></use>
-            </svg>
-            <svg className={css.greyStar} width="16" height="16">
-              <use href={sprite + "#icon-star"}></use>
-            </svg>
-            <svg className={css.greyStar} width="16" height="16">
-              <use href={sprite + "#icon-star"}></use>
-            </svg>
-            <svg className={css.greyStar} width="16" height="16">
-              <use href={sprite + "#icon-star"}></use>
-            </svg>
-          </div>
-        );
-      case 2:
-        return (
-          <div>
-            <svg className={css.golgStar} width="16" height="16">
-              <use href={sprite + "#icon-star"}></use>
-            </svg>
-            <svg className={css.golgStar} width="16" height="16">
-              <use href={sprite + "#icon-star"}></use>
-            </svg>
-            <svg className={css.greyStar} width="16" height="16">
-              <use href={sprite + "#icon-star"}></use>
-            </svg>
-            <svg className={css.greyStar} width="16" height="16">
-              <use href={sprite + "#icon-star"}></use>
-            </svg>
-            <svg className={css.greyStar} width="16" height="16">
-              <use href={sprite + "#icon-star"}></use>
-            </svg>
-          </div>
-        );
-      case 3:
-        return (
-          <div>
-            <svg className={css.golgStar} width="16" height="16">
-              <use href={sprite + "#icon-star"}></use>
-            </svg>
-            <svg className={css.golgStar} width="16" height="16">
-              <use href={sprite + "#icon-star"}></use>
-            </svg>
-            <svg className={css.golgStar} width="16" height="16">
-              <use href={sprite + "#icon-star"}></use>
-            </svg>
-            <svg className={css.greyStar} width="16" height="16">
-              <use href={sprite + "#icon-star"}></use>
-            </svg>
-            <svg className={css.greyStar} width="16" height="16">
-              <use href={sprite + "#icon-star"}></use>
-            </svg>
-          </div>
-        );
-      case 4:
-        return (
-          <div>
-            <svg className={css.golgStar} width="16" height="16">
-              <use href={sprite + "#icon-star"}></use>
-            </svg>
-            <svg className={css.golgStar} width="16" height="16">
-              <use href={sprite + "#icon-star"}></use>
-            </svg>
-            <svg className={css.golgStar} width="16" height="16">
-              <use href={sprite + "#icon-star"}></use>
-            </svg>
-            <svg className={css.golgStar} width="16" height="16">
-              <use href={sprite + "#icon-star"}></use>
-            </svg>
-            <svg className={css.greyStar} width="16" height="16">
-              <use href={sprite + "#icon-star"}></use>
-            </svg>
-          </div>
-        );
-      case 5:
-        return (
-          <div>
-            <svg className={css.golgStar} width="16" height="16">
-              <use href={sprite + "#icon-star"}></use>
-            </svg>
-            <svg className={css.golgStar} width="16" height="16">
-              <use href={sprite + "#icon-star"}></use>
-            </svg>
-            <svg className={css.golgStar} width="16" height="16">
-              <use href={sprite + "#icon-star"}></use>
-            </svg>
-            <svg className={css.golgStar} width="16" height="16">
-              <use href={sprite + "#icon-star"}></use>
-            </svg>
-            <svg className={css.golgStar} width="16" height="16">
-              <use href={sprite + "#icon-star"}></use>
-            </svg>
-          </div>
-        );
-      default:
-        return (
-          <div>
-            <svg className={css.greyStar} width="16" height="16">
-              <use href={sprite + "#icon-star"}></use>
-            </svg>
-            <svg className={css.greyStar} width="16" height="16">
-              <use href={sprite + "#icon-star"}></use>
-            </svg>
-            <svg className={css.greyStar} width="16" height="16">
-              <use href={sprite + "#icon-star"}></use>
-            </svg>
-            <svg className={css.greyStar} width="16" height="16">
-              <use href={sprite + "#icon-star"}></use>
-            </svg>
-            <svg className={css.greyStar} width="16" height="16">
-              <use href={sprite + "#icon-star"}></use>
-            </svg>
-          </div>
-        );
+  const createStars = (numberOfStars) => {
+    const markup = [];
+    for (let i = 0; i < 5; i++) {
+      markup.push(
+        <svg
+          className={i < numberOfStars ? css.golgStar : css.greyStar}
+          width="16"
+          height="16"
+        >
+          <use href={sprite + "#icon-star"}></use>
+        </svg>
+      );
     }
+    return markup;
   };
   return (
     <div className={css.campersReviewsContainer}>
@@ -144,7 +34,7 @@ const CamperReviews = () => {
               </div>
               <div>
                 <p className={css.reviewerName}>{review.reviewer_name}</p>
-                <p>{makeStars(review.reviewer_rating)}</p>
+                <p>{createStars(review.reviewer_rating)}</p>
               </div>
             </div>
             <p className={css.reviewText}>{review.comment}</p>
