@@ -1,4 +1,3 @@
-// import { Suspense } from "react";
 import { Outlet } from "react-router-dom";
 import Header from "../../Components/Header/Header";
 import css from "./MainLayout.module.css";

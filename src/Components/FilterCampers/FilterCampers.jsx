@@ -30,7 +30,6 @@ const FilterCampers = ({ campersFilter }) => {
     console.log(filters);
     console.log(filter);
     dispatch(changeFilter(filter));
-    // actions.resetForm();
   };
   return (
     <Formik

@@ -1,7 +1,3 @@
-import { useState } from "react";
-import CamperFeatures from "../CamperFeatures/CamperFeatures";
-import CamperReviews from "../CamperReviews/CamperReviews";
-
 import { useDispatch, useSelector } from "react-redux";
 import { openModal, setCamper } from "../../store/modalSlice";
 import { selectFavorites, selectModal } from "../../store/selectors";
@@ -50,7 +46,6 @@ const CamperCard = ({
   return (
     <div className={css.cardContainer}>
       <img className={css.camperPicture} src={gallery[0]} alt="" />
-      {/* <div className={css.camperPicture}></div> */}
       <div className={css.camperInfoContainer}>
         <div className={css.cardHeaderBlock}>
           <div className={css.cardHeader}>

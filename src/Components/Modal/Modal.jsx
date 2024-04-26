@@ -35,7 +35,6 @@ export const Modal = () => {
   const handleOverlayClick = (evt) => {
     if (evt.currentTarget === evt.target) {
       dispatch(closeModal());
-      // dispatch(cleanCamper());
     }
   };
 
@@ -49,7 +48,6 @@ export const Modal = () => {
             className={css.modalClose}
             onClick={() => {
               dispatch(closeModal());
-              // dispatch(cleanCamper());
             }}
           >
             <svg className={css.closeImage} width="32" height="32">
@@ -84,9 +82,7 @@ export const Modal = () => {
         <ul className={css.switchButtonsContainer}>
           <li>
             <button
-              // className={featuresActive}
               className={css.switchButton}
-              // css.switchButton + " " + `${featuresActive.toString()}`
               type="button"
               onClick={() => {
                 setFeaturesActive("css.isActive");
@@ -99,7 +95,6 @@ export const Modal = () => {
           <li>
             <button
               className={css.switchButton}
-              // className={reviewsActive}
               type="button"
               onClick={() => {
                 setReviewsActive("css.isActive");
