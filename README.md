@@ -28,5 +28,5 @@ This project helps you to find a proper camper for travelling. There are 3 pages
 ## Setup on your computer
 
 1. Clone repository to your computer
-2. npm install Install dependencies
-3. npm run dev Start project from local computer
+2. npm install to Install dependencies
+3. npm run dev to Start project from local computer
