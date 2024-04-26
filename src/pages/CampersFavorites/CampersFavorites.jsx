@@ -4,42 +4,47 @@ import { useSelector } from "react-redux";
 import { selectFavorites } from "../../store/selectors";
 import CamperCard from "../../Components/CamperCard/CamperCard";
 
+import css from "./CampersFavorites.module.css";
+
 const CampersFavorites = () => {
   const favorites = useSelector(selectFavorites);
   const [favoriteCampers, setFavoriteCampers] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
   useEffect(() => {
     const formCampersList = async () => {
-      // setLoading(true);
+      setLoading(true);
+      setError(null);
       try {
-        console.log("fetch");
         const data = await fetchCampers();
-        console.log(data.length);
         setFavoriteCampers(
           data.filter((camper) => favorites.includes(camper._id))
         );
-        console.log(favoriteCampers);
-        // if (data.length < 4) {
-        //   setLoadMoreIsVisible(false);
-        // }
-        // setCampers((prevState) => [...prevState, ...data]);
-      } catch (error) {
-        console.log(error);
-        // setError(error.message);
+      } catch (err) {
+        setError(err.message);
       } finally {
-        // setLoading(false);
+        setLoading(false);
       }
     };
     formCampersList();
   }, [favorites]);
 
   return (
-    <ul>
-      {favoriteCampers.map((camper) => (
-        <li key={camper._id}>
-          <CamperCard camper={camper} />
-        </li>
-      ))}
-    </ul>
+    <div>
+      <ul>
+        {favoriteCampers.map((camper) => (
+          <li key={camper._id}>
+            <CamperCard camper={camper} />
+          </li>
+        ))}
+      </ul>
+      {loading && (
+        <p className={css.loadingMessage}>
+          Please wait, loading information...
+        </p>
+      )}
+      {error && <p className={css.errorMessage}>Error! {error}</p>}
+    </div>
   );
 };
 

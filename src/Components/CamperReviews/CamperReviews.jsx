@@ -6,12 +6,12 @@ import sprite from "../../img/sprite.svg";
 
 const CamperReviews = () => {
   const { reviews } = useSelector(selectCamper);
-  console.log(reviews);
   const createStars = (numberOfStars) => {
     const markup = [];
     for (let i = 0; i < 5; i++) {
       markup.push(
         <svg
+          key={i}
           className={i < numberOfStars ? css.golgStar : css.greyStar}
           width="16"
           height="16"

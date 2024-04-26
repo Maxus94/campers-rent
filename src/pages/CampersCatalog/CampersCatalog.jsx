@@ -2,10 +2,10 @@ import { useEffect, useState } from "react";
 import CamperCard from "../../Components/CamperCard/CamperCard";
 import { fetchCampers } from "../../api/campers";
 import { useDispatch, useSelector } from "react-redux";
-import { selectFilters, selectPage } from "../../store/selectors";
 import { nextPage } from "../../store/pageSlice";
 import FilterCampers from "../../Components/FilterCampers/FilterCampers";
 import css from "./CampersCatalog.module.css";
+import { selectPage } from "../../store/selectors";
 
 const CampersCatalog = () => {
   const [campers, setCampers] = useState([]);

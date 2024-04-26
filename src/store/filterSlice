@@ -1,15 +1,23 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const filterSlice = createSlice({
-    name: "filters",
-    initialState: { location: '', form: '', ac: '', gearBox: '', kitchen: '', tv: '', shover: '', },
-    reducers: {
-        changeFilter: (state, { payload }) => {
-            state.location = payload.location;
-            console.log(payload);
-            console.log(state.form);
-        },
+  name: "filters",
+  initialState: {
+    location: "",
+    form: "",
+    ac: "",
+    gearBox: "",
+    kitchen: "",
+    tv: "",
+    shover: "",
+  },
+  reducers: {
+    changeFilter: (state, { payload }) => {
+      state.location = payload.location;
+      console.log(payload);
+      console.log(state.form);
     },
+  },
 });
 
 export const filterReducer = filterSlice.reducer;

@@ -11,6 +11,5 @@ const instanceCampers = (page) => {
 
 export const fetchCampers = async (page) => {
   const { data } = await instanceCampers(page);
-  console.log(data);
   return data;
 };

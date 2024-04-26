@@ -3,12 +3,8 @@ import css from "./BookCamper.module.css";
 const BookCamper = () => {
   const handleSubmit = (evt) => {
     evt.preventDefault();
-    console.log(evt.target.email.value);
-    console.log(evt.target.name.value);
-    console.log(typeof evt.target.date.value);
     const date = new Date(evt.target.date.value);
     const curDate = Date.now();
-    console.log(date.getTime(), curDate);
 
     if (curDate > date.getTime()) {
       alert("Date must be in future");

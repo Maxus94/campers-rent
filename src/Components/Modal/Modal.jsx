@@ -38,7 +38,6 @@ export const Modal = () => {
       // dispatch(cleanCamper());
     }
   };
-  console.log(modalIsShown);
 
   return (
     <div className={css.overlay} onClick={handleOverlayClick}>
